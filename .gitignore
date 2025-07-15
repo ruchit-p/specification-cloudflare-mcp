@@ -1,0 +1,54 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Environment and config
+.env
+.env.*
+!.env.example
+.DS_Store
+
+# Build output
+dist/
+build/
+.wrangler/
+
+# Development files
+*.log
+proxy.log
+test-*.js
+mcp-proxy.cjs
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Local development artifacts
+.claude/
+*.local.*
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# OS files
+Thumbs.db
+
+# Wrangler state
+.mf/
+
+# Development configurations
+wrangler.toml
+src/index.ts
+deploy.sh
+
+# Keep production files
+!wrangler-auth0.toml
+!wrangler-auth0.jsonc
+!deploy-auth0.sh
+!src/index-auth0-streamable.ts
+!src/auth.ts
