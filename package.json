@@ -1,7 +1,27 @@
 {
   "name": "specification-mcp-auth0",
-  "version": "1.0.0",
-  "private": true,
+  "version": "1.0.1",
+  "private": false,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOUR_ORG/specification-cloudflare-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_ORG/specification-cloudflare-mcp/issues"
+  },
+  "homepage": "https://github.com/YOUR_ORG/specification-cloudflare-mcp#readme",
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "cloudflare",
+    "workers",
+    "auth0",
+    "mcp",
+    "modelcontextprotocol",
+    "typescript"
+  ],
   "scripts": {
     "deploy": "npx wrangler deploy -c wrangler-auth0.jsonc",
     "dev": "npx wrangler dev -c wrangler-auth0.jsonc",
@@ -10,24 +30,26 @@
     "start": "npx wrangler dev -c wrangler-auth0.jsonc",
     "cf-typegen": "npx wrangler types",
     "type-check": "tsc --noEmit",
-    "test": "vitest"
+    "build": "tsc --noEmit",
+    "test": "vitest",
+    "format": "prettier -w ."
   },
   "dependencies": {
-    "@cloudflare/workers-oauth-provider": "^0.0.5",
-    "@modelcontextprotocol/sdk": "1.13.1",
-    "agents": "^0.0.100",
-    "hono": "^4.8.3",
-    "jose": "^6.0.11",
+    "@cloudflare/workers-oauth-provider": "^0.0.6",
+    "@modelcontextprotocol/sdk": "^1.17.2",
+    "agents": "^0.0.111",
+    "hono": "^4.9.0",
+    "jose": "^6.0.12",
     "just-pick": "^4.2.0",
-    "oauth4webapi": "^3.5.3",
+    "oauth4webapi": "^3.6.1",
     "workers-mcp": "^0.0.13",
     "zod": "^3.25.67"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20250701.0",
+    "@cloudflare/workers-types": "^4.20250807.0",
     "prettier": "^3.6.2",
-    "typescript": "^5.8.3",
-    "wrangler": "^4.22.0",
-    "vitest": "^1.0.0"
+    "typescript": "^5.9.2",
+    "wrangler": "^4.28.1",
+    "vitest": "^3.2.4"
   }
 }

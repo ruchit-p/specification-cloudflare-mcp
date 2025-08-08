@@ -640,13 +640,13 @@ app.post("/authorize/consent", confirmConsent);
 app.get("/callback", callback);
 
 export default new OAuthProvider({
-  // @ts-expect-error - Type compatibility issue with agents package
-  apiHandler: AuthenticatedSpecificationMCP.serve("/mcp"), // Changed from .mount("/sse") to .serve("/mcp")
-  apiRoute: "/mcp", // Changed from "/sse" to "/mcp" for HTTP streamable
+  apiHandler: AuthenticatedSpecificationMCP.serve("/mcp"),
+  apiRoute: "/mcp",
   authorizeEndpoint: "/authorize",
   clientRegistrationEndpoint: "/register",
-  // @ts-expect-error - Type compatibility issue with agents package  
-  defaultHandler: app,
+  defaultHandler: {
+    fetch: (req: Request, env: any, ctx: any) => app.fetch(req, env, ctx),
+  },
   tokenEndpoint: "/token",
   tokenExchangeCallback,
 });

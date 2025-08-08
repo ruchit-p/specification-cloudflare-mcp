@@ -25,18 +25,18 @@
   "kv_namespaces": [
     {
       "binding": "OAUTH_KV",
-      "id": "5780ec9498cf4d6fadc38878977d0032",
+      "id": "YOUR_OAUTH_KV_ID",
     },
     {
       "binding": "SPECIFICATION_MCP_OAUTH",
-      "id": "5780ec9498cf4d6fadc38878977d0032",
+      "id": "YOUR_MCP_OAUTH_KV_ID",
     },
   ],
   "d1_databases": [
     {
       "binding": "DB",
       "database_name": "specifications-prod",
-      "database_id": "9513e380-fb7b-4670-9301-4ea918df80ba",
+      "database_id": "YOUR_DATABASE_ID",
     },
   ],
   "ai": {
@@ -46,8 +46,8 @@
     "enabled": true,
   },
   "vars": {
-    "AUTH0_DOMAIN": "dyanstyplatforms.us.auth0.com",
-    "AUTH0_CLIENT_ID": "xl816Cc6y4nhHBri8pgcIQkOfEBQEGet",
+    "AUTH0_DOMAIN": "YOUR_TENANT.auth0.com",
+    "AUTH0_CLIENT_ID": "YOUR_CLIENT_ID",
     "AUTH0_AUDIENCE": "urn:specification-mcp-server",
     "AUTH0_SCOPE": "openid profile email read:specifications write:specifications delete:specifications compare:versions",
   },

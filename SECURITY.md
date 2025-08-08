@@ -268,9 +268,9 @@ if (requestCount && parseInt(requestCount) > 100) {
 ### Environment Variables
 
 ```toml
-# wrangler-auth0.toml - Public configuration
-AUTH0_DOMAIN = "your-tenant.auth0.com"
-AUTH0_CLIENT_ID = "public-client-id"
+# wrangler-auth0.toml - Public configuration (placeholders; do not commit real IDs)
+AUTH0_DOMAIN = "YOUR_TENANT.auth0.com"
+AUTH0_CLIENT_ID = "YOUR_CLIENT_ID"
 AUTH0_AUDIENCE = "urn:specification-mcp-server"
 
 # Secrets (never in configuration files)

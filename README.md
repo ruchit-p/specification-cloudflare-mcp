@@ -16,7 +16,7 @@ npm install
 npm run deploy:auth0
 ```
 
-**Live Server**: `https://specification-mcp-auth0.ruchit.workers.dev/mcp`
+Example endpoint: `https://specification-mcp-auth0.<your-subdomain>.workers.dev/mcp`
 
 ## 📚 Documentation
 
@@ -87,7 +87,7 @@ npm run deploy:auth0
       "command": "npx",
       "args": [
         "mcp-remote",
-        "https://specification-mcp-auth0.ruchit.workers.dev/mcp"
+        "https://specification-mcp-auth0.<your-subdomain>.workers.dev/mcp"
       ]
     }
   }
@@ -97,7 +97,7 @@ npm run deploy:auth0
 ### Production Configuration
 
 - **Database**: Cloudflare D1 (`specifications-prod`)
-- **Authentication**: Auth0 (`dyanstyplatforms.us.auth0.com`)
+- **Authentication**: Auth0 (`YOUR_TENANT.auth0.com`)
 - **Transport**: HTTP Streamable (port `/mcp`)
 - **Storage**: Cloudflare KV for OAuth state
 
@@ -125,21 +125,13 @@ specification-cloudflare-mcp/
 
 ## 🚀 Deployment Status
 
-### Current Deployment
+### Example Deployment
 
 - **Environment**: Production
-- **URL**: `https://specification-mcp-auth0.ruchit.workers.dev/mcp`
-- **Status**: ✅ Active
-- **Version**: `f6374a6b-1649-4e1f-9cf3-4c8c94c13fda`
+- **URL**: `https://specification-mcp-auth0.<your-subdomain>.workers.dev/mcp`
 - **Transport**: HTTP Streamable
 - **Database**: `specifications-prod`
-
-### Security Configuration
-
-- **Auth0 Domain**: `dyanstyplatforms.us.auth0.com`
-- **Access Token TTL**: 15 minutes
-- **Refresh Token TTL**: 1 hour
-- **User Isolation**: ✅ Enabled
+- **Auth0 Domain**: `YOUR_TENANT.auth0.com`
 - **OAuth Flow**: PKCE with state protection
 
 ## 📊 Usage
@@ -154,7 +146,7 @@ specification-cloudflare-mcp/
 
 ```bash
 # Create a specification
-curl -X POST https://specification-mcp-auth0.ruchit.workers.dev/mcp \
+curl -X POST https://specification-mcp-auth0.<your-subdomain>.workers.dev/mcp \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer YOUR_TOKEN" \
   -d '{
@@ -170,7 +162,7 @@ curl -X POST https://specification-mcp-auth0.ruchit.workers.dev/mcp \
   }'
 
 # List specifications
-curl -X POST https://specification-mcp-auth0.ruchit.workers.dev/mcp \
+curl -X POST https://specification-mcp-auth0.<your-subdomain>.workers.dev/mcp \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer YOUR_TOKEN" \
   -d '{
@@ -255,12 +247,10 @@ npm run deploy:auth0
 
 ## 📜 License
 
-This project is configured for production use with Auth0 and Cloudflare Workers.
+This project is open source under the MIT License. See [LICENSE](./LICENSE).
 
 ---
 
-**Server Status**: ✅ Active  
-**Last Updated**: January 2025  
-**Documentation Version**: 2.0.0  
+**Last Updated**: August 2025  
 **MCP Protocol**: HTTP Streamable  
 **Auth Provider**: Auth0 OAuth 2.0

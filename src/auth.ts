@@ -85,7 +85,8 @@ export async function getOidcConfig({
  */
 export async function authorize(c: Context<{ Bindings: Env & { OAUTH_PROVIDER: OAuthHelpers } }>) {
   console.log('[Auth0 Authorize] Request URL:', c.req.url);
-  console.log('[Auth0 Authorize] Request headers:', Object.fromEntries(c.req.headers.entries()));
+  // Hono's request wrapper exposes headers on the underlying Request via c.req.raw
+  console.log('[Auth0 Authorize] Request headers:', Object.fromEntries(c.req.raw.headers.entries()));
   
   const mcpClientAuthRequest = await c.env.OAUTH_PROVIDER.parseAuthRequest(c.req.raw);
   console.log('[Auth0 Authorize] Parsed MCP client auth request:', JSON.stringify(mcpClientAuthRequest));

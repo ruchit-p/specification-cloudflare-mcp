@@ -35,7 +35,7 @@ An Auth0-authenticated Model Context Protocol (MCP) server for managing technica
 
 ### Live Server
 
-- **URL**: `https://specification-mcp-auth0.ruchit.workers.dev/mcp`
+- **URL**: `https://specification-mcp-auth0.<your-subdomain>.workers.dev/mcp`
 - **Status**: Active and production-ready
 - **Transport**: HTTP Streamable
 - **Authentication**: Auth0 OAuth 2.0
@@ -48,7 +48,7 @@ An Auth0-authenticated Model Context Protocol (MCP) server for managing technica
 
 ### Auth0 Configuration
 
-- **Domain**: `dyanstyplatforms.us.auth0.com`
+- **Domain**: `YOUR_TENANT.auth0.com`
 - **Application Type**: Regular Web Application
 - **Flow**: Authorization Code with PKCE
 - **Scopes**: `openid profile email read:specifications write:specifications delete:specifications compare:versions`
@@ -116,7 +116,7 @@ An Auth0-authenticated Model Context Protocol (MCP) server for managing technica
       "command": "npx",
       "args": [
         "mcp-remote",
-        "https://specification-mcp-auth0.ruchit.workers.dev/mcp"
+        "https://specification-mcp-auth0.<your-subdomain>.workers.dev/mcp"
       ]
     }
   }
@@ -126,7 +126,7 @@ An Auth0-authenticated Model Context Protocol (MCP) server for managing technica
 ### Direct HTTP API
 
 ```bash
-curl -X POST https://specification-mcp-auth0.ruchit.workers.dev/mcp \
+curl -X POST https://specification-mcp-auth0.<your-subdomain>.workers.dev/mcp \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer YOUR_TOKEN" \
   -d '{"method": "list_specifications", "params": {"limit": 10}}'

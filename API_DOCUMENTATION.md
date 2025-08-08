@@ -7,7 +7,7 @@ This document provides comprehensive API documentation for the Specification Ver
 ## Base URL
 
 ```
-https://specification-mcp-auth0.ruchit.workers.dev/mcp
+https://specification-mcp-auth0.<your-subdomain>.workers.dev/mcp
 ```
 
 ## Authentication
@@ -651,7 +651,7 @@ class SpecificationMCPClient {
 
 ```bash
 # Create specification
-curl -X POST https://specification-mcp-auth0.ruchit.workers.dev/mcp \
+curl -X POST https://specification-mcp-auth0.<your-subdomain>.workers.dev/mcp \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \
   -d '{
@@ -667,7 +667,7 @@ curl -X POST https://specification-mcp-auth0.ruchit.workers.dev/mcp \
   }'
 
 # List specifications
-curl -X POST https://specification-mcp-auth0.ruchit.workers.dev/mcp \
+curl -X POST https://specification-mcp-auth0.<your-subdomain>.workers.dev/mcp \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \
   -d '{
@@ -678,7 +678,7 @@ curl -X POST https://specification-mcp-auth0.ruchit.workers.dev/mcp \
   }'
 
 # Search specifications
-curl -X POST https://specification-mcp-auth0.ruchit.workers.dev/mcp \
+curl -X POST https://specification-mcp-auth0.<your-subdomain>.workers.dev/mcp \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \
   -d '{
@@ -722,7 +722,7 @@ The API supports webhook notifications for specification events:
 ### Test Environment
 
 ```
-https://specification-mcp-auth0-test.ruchit.workers.dev/mcp
+https://specification-mcp-auth0-test.<your-subdomain>.workers.dev/mcp
 ```
 
 ### Test Account
